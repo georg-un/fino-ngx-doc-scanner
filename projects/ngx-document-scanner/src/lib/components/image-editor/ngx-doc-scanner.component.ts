@@ -155,7 +155,7 @@ export class NgxDocScannerComponent implements OnInit {
   /**
    * stores the preview image as canvas
    */
-  @ViewChild('PreviewCanvas', {read: ElementRef}) private previewCanvas: ElementRef;
+  @ViewChild('PreviewCanvas', {static: false, read: ElementRef}) private previewCanvas: ElementRef;
   /**
    * an array of points used by the crop tool
    */

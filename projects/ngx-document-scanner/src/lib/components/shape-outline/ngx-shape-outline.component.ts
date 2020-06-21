@@ -11,7 +11,7 @@ export class NgxShapeOutlineComponent implements AfterViewInit {
   @Input() color = '#3cabe2';
   @Input() weight: number;
   @Input() dimensions: ImageDimensions;
-  @ViewChild('outline') canvas;
+  @ViewChild('outline', {static: false}) canvas;
 
   private _points: Array<PointPositionChange>;
   private _sortedPoints: Array<PointPositionChange>;
