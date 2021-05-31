@@ -45,11 +45,11 @@ import the package to your `app.module`. you'll need to configure the location o
     <ngx-doc-scanner 
          *ngIf="image"
          [file]="image"
-         [config]="config">
+         [config]="config"
          (editResult)="editResult($event)"
          (exitEditor)="exitEditor($event)"
          (error)="onError($event)"
-         (processing)="editorState($event)"
+         (processing)="editorState($event)">
     </ngx-doc-scanner>
 
 #### set configuration options. for example:
@@ -84,7 +84,7 @@ import the package to your `app.module`. you'll need to configure the location o
 ## Configuration Object
 optional configuration values that can be passed to the component. 
 
-    import {DocScannerConfig} form 'ngx-document-scanner'
+    import {DocScannerConfig} from 'ngx-document-scanner'
     config: DocScannerConfig = {
 	    ....
     }
