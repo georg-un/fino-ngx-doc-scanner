@@ -876,7 +876,7 @@ NgxShapeOutlineComponent.propDecorators = {
     color: [{ type: Input }],
     weight: [{ type: Input }],
     dimensions: [{ type: Input }],
-    canvas: [{ type: ViewChild, args: ['outline',] }]
+    canvas: [{ type: ViewChild, args: ['outline', { static: false },] }]
 };
 if (false) {
     /** @type {?} */
@@ -1763,7 +1763,7 @@ NgxDocScannerComponent.ctorParameters = () => [
     { type: MatBottomSheet }
 ];
 NgxDocScannerComponent.propDecorators = {
-    previewCanvas: [{ type: ViewChild, args: ['PreviewCanvas', { read: ElementRef },] }],
+    previewCanvas: [{ type: ViewChild, args: ['PreviewCanvas', { static: false, read: ElementRef },] }],
     exitEditor: [{ type: Output }],
     editResult: [{ type: Output }],
     error: [{ type: Output }],

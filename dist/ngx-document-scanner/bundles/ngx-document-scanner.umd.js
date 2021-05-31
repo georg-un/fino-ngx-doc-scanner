@@ -1282,7 +1282,7 @@
             color: [{ type: core.Input }],
             weight: [{ type: core.Input }],
             dimensions: [{ type: core.Input }],
-            canvas: [{ type: core.ViewChild, args: ['outline',] }]
+            canvas: [{ type: core.ViewChild, args: ['outline', { static: false },] }]
         };
         return NgxShapeOutlineComponent;
     }());
@@ -2437,7 +2437,7 @@
             { type: bottomSheet.MatBottomSheet }
         ]; };
         NgxDocScannerComponent.propDecorators = {
-            previewCanvas: [{ type: core.ViewChild, args: ['PreviewCanvas', { read: core.ElementRef },] }],
+            previewCanvas: [{ type: core.ViewChild, args: ['PreviewCanvas', { static: false, read: core.ElementRef },] }],
             exitEditor: [{ type: core.Output }],
             editResult: [{ type: core.Output }],
             error: [{ type: core.Output }],
